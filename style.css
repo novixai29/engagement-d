@@ -2390,3 +2390,189 @@ button {
   }
 
 }
+
+/* ==========================================
+   تحسين صورة الخبر الرئيسية
+   Engagement Newspaper
+========================================== */
+
+.lead-photo {
+
+  width: 100%;
+
+  max-width: 680px;
+
+  margin:
+    0 auto 18px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #625d53;
+
+  background:
+    #d8cfbd;
+
+  box-shadow:
+    0 5px 14px
+    rgba(47, 42, 34, 0.10);
+
+}
+
+
+/* الصورة نفسها */
+
+.lead-photo img {
+
+  width: 100%;
+
+  height: 430px;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position:
+    center 22%;
+
+  filter:
+    grayscale(100%)
+    contrast(1.08)
+    brightness(0.97)
+    sepia(7%);
+
+}
+
+
+/* تأثير خفيف يشبه حبر الجريدة */
+
+.lead-photo {
+
+  position: relative;
+
+}
+
+
+.lead-photo::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  background:
+
+    repeating-linear-gradient(
+      0deg,
+      rgba(30, 27, 23, 0.12) 0,
+      rgba(30, 27, 23, 0.12) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  mix-blend-mode: multiply;
+
+}
+
+
+/* الكابشن */
+
+.lead-photo figcaption {
+
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  padding:
+    7px 9px;
+
+  background:
+    var(--paper);
+
+  color:
+    var(--muted);
+
+  font-family:
+    var(--font-arabic);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  border-top:
+    1px solid
+    rgba(60, 55, 48, 0.35);
+
+}
+
+
+/* ==========================================
+   التابلت
+========================================== */
+
+@media
+(max-width: 850px) {
+
+  .lead-photo {
+
+    max-width: 100%;
+
+  }
+
+
+  .lead-photo img {
+
+    height: 390px;
+
+    object-position:
+      center 20%;
+
+  }
+
+}
+
+
+/* ==========================================
+   الموبايل
+========================================== */
+
+@media
+(max-width: 600px) {
+
+  .lead-photo img {
+
+    height: 420px;
+
+    object-position:
+      center 18%;
+
+  }
+
+}
+
+
+/* ==========================================
+   الموبايل الصغير
+========================================== */
+
+@media
+(max-width: 380px) {
+
+  .lead-photo img {
+
+    height: 380px;
+
+    object-position:
+      center 18%;
+
+  }
+
+}
